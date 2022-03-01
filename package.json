@@ -1,0 +1,24 @@
+{
+  "name": "honestnft-shenanigans",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "compile": "typechain --target ethers-v5 abi/*.json --out-dir src/typechain/",
+    "test": "yarn build && node dist/nft_worlds_transactions.js",
+    "transform": "yarn build && node dist/transform.js",
+    "analysis": "yarn build && node dist/analysis.js"
+  },
+  "dependencies": {
+    "@typechain/ethers-v5": "^9.0.0",
+    "@types/cli-progress": "^3.9.2",
+    "@types/node": "^17.0.19",
+    "cli-progress": "^3.10.0",
+    "ethers": "^5.5.4",
+    "node-fetch": "^3.2.0",
+    "typechain": "^7.0.0",
+    "typescript": "^4.5.5"
+  }
+}
